@@ -1,0 +1,36 @@
+
+    [{
+        "image":"images/talo1.jpeg",
+        "address":"Lönnrotinkatu 3, 00120, Helsinki:",
+        "size":"170",
+        "text":"Designed by Granholm and completed in 1896, the Kivipalatsi in the Pyy quarter is still one of the most beautiful buildings in Helsinki today.",
+        "price":"700000"
+    },
+    {
+        "image":"images/talo2.jpg",
+        "address":"Telakkakatu 3 A, 00150, Helsinki",
+        "size":"180",
+        "text":"Double doors from the kitchen open the balcony as part of the living room. Two spacious bathrooms, one with a bathtub. Flexible room divisions, lots of windows.",
+        "price":"800000"
+    },
+    {
+        "image":"images/talo3.jpg",
+        "address":"Lönnrotinkatu 3, 00120, Helsinki",
+        "size":"210",
+        "text":"The entrance to this quiet, perfectly renovated and ready-to-move-in apartment is on the side of the sheltered courtyard. The windows of the rooms face Yrjönkatu, the windows of the open kitchen and utility room face the courtyard.",
+        "price":"900000"
+    },
+    {
+        "image":"images/talo4.jpeg",
+        "address":"Kunnallisneuvoksentie 8 A, 00930 Helsinki",
+        "size":"190",
+        "text":"The most wonderful value company in the center of Helsinki now offers the best views of the city center. The historic Lackman house was completely renovated to its new glory under the management of the construction company Hartela in 2011, respecting the beautiful architecture.",
+        "price":"1100000"
+    },
+    {
+        "image":"images/talo5.jpeg",
+        "address":"Katajaharjuntie 18, 00200 Helsinki",
+        "size":"220",
+        "text":"A stunningly beautiful and high-quality complex in a prestigious area near the sea in Marjaniemi. This immaculate and well-designed beauty of a house was built in 2000 and inspected in August 2014.",
+        "price":"1200000"
+    }]

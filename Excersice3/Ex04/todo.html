@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple ToDo App</title>
+</head>
+<body>
+    <h1>ToDo List</h1>
+    <div>
+        <button id="addButton">Add</button>
+        <button id="removeAllButton">Remove List</button>
+    </div>
+    <ul id="todoList">
+    </ul>
+
+    <script>
+        // Function to add a new todo item
+        function addTodo() {
+            const todoText = prompt("Enter a new todo:");
+            if (todoText) {
+                const todoList = document.getElementById("todoList");
+                const listItem = document.createElement("li");
+                listItem.textContent = todoText;
+                listItem.addEventListener("click", removeTodo);
+                todoList.appendChild(listItem);
+            }
+        }
+
+        // Function to remove a single todo item
+        function removeTodo(event) {
+            event.target.remove();
+        }
+
+        // Function to remove all todos
+        function removeAllTodos() {
+            const todoList = document.getElementById("todoList");
+            while (todoList.firstChild) {
+                todoList.removeChild(todoList.firstChild);
+            }
+        }
+
+        // Add event listeners
+        const addButton = document.getElementById("addButton");
+        const removeAllButton = document.getElementById("removeAllButton");
+
+        addButton.addEventListener("click", addTodo);
+        removeAllButton.addEventListener("click", removeAllTodos);
+    </script>
+</body>
+</html>

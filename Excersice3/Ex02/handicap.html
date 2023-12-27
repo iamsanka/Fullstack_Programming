@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Print handicaps</title>
+  <script>
+    let hcpdata = [
+      { "name": "Ari", "hcp": 54 },
+      { "name": "Pasi", "hcp": 5 },
+      { "name": "Seppo", "hcp": 20 }
+    ];
+
+    // Function to display handicaps when the button is clicked
+    function showHandicaps() {
+      const hcplist = document.getElementById("hcplist");
+
+      // Clear any previous list items
+      hcplist.innerHTML = '';
+
+      // Loop through the hcpdata array and create list items
+      hcpdata.forEach(player => {
+        const listItem = document.createElement("li");
+        listItem.textContent = `${player.name}:  ${player.hcp}`;
+        hcplist.appendChild(listItem);
+      });
+    }
+  </script>
+</head>
+<body>
+  <h1>Golf Player Handicaps</h1>
+  <button onclick="showHandicaps()">Show Handicaps</button>
+  <ul id="hcplist"></ul>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Todo App</title>
+</head>
+<body>
+  <h1>Todo App</h1>
+  <form action="/add" method="post">
+    <input type="text" name="description" placeholder="Add a new task" required>
+    <button type="submit">Add Task</button>
+  </form>
+  <form action="/search" method="get">
+    <input type="text" name="search" placeholder="Search tasks">
+    <button type="submit">Search</button>
+  </form>
+  <ul>
+    <% tasks.forEach(task => { %>
+      <li>
+        <form action="/update/<%= task._id %>" method="post">
+          <input type="text" name="description" value="<%= task.description %>" required>
+          <button type="submit">Update</button>
+        </form>
+        <a href="/delete/<%= task._id %>">Delete</a>
+        <span><%= task.date.toDateString() %></span>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const print = (str, taskTime) => {
+  setTimeout(function() {
+    console.log(`${str} finished!`)
+  }, taskTime)
+}
+
+const execute = (str, taskTime, callback)  => {  
+  callback(str, taskTime)
+}
+
+console.log("Task1 to execution...")
+execute('Task1', 2000, print)
+
+console.log("Task2 to execution...")
+execute('Task2', 2000, print)
+
+console.log("Task3 to execution...")
+execute('Task3', 500, print)
+
+console.log("Last code line executed!")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!--
+Actually the code is confusing...
+but what should happend here is 
+1- 'Task 1 to execution' should be printed on the console
+then on the 12th line 'execute' function is called with 'print' function and callback time is given as 2000 milli secs
+2- 'Task 2 to execution' is printed on the console
+then on the 15th line 'execute' function is called with 'print' function and callback time is given as 2000 milli secs
+3- 'Task 3 to execute' is prints on the console
+then on the 18th line 'execute' function is called with 'print' function and callback time is given as 500 milli secs
+4- 'Last code line executed' should e prints on the console
+then the callback should work by now so according to the times given
+'Task 3 Finished'
+'Task 1 Finished'
+'Task 2 Finished' 
+Should prints on the console
+-->

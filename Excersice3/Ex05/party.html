@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Text Changer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #result-area {
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Party Text Changer</h1>
+
+    <label for="party-color">Select a party color:</label>
+    <select id="party-color">
+        <option value="#ff0000">Red</option>
+        <option value="#00ff00">Green</option>
+        <option value="#0000ff">Blue</option>
+    </select>
+
+    <br><br>
+
+    <label for="party-text">What Party?</label>
+    <input type="text" id="party-text" placeholder="Enter text">
+
+    <br><br>
+
+    <button id="change-color-btn">Change Chosen Background Color</button>
+
+    <div id="result-area"></div>
+
+    <script>
+        const partyColorSelect = document.getElementById('party-color');
+        const partyText = document.getElementById('party-text');
+        const resultArea = document.getElementById('result-area');
+        const changeColorBtn = document.getElementById('change-color-btn');
+
+        // Event listener for the "Change Chosen Background Color" button
+        changeColorBtn.addEventListener('click', () => {
+            const selectedColor = partyColorSelect.value;
+            resultArea.style.backgroundColor = selectedColor;
+        });
+
+        // Event listener for the "What Party?" input
+        partyText.addEventListener('input', () => {
+            // Remove any non-letter characters from the input
+            const text = partyText.value.replace(/[^a-zA-Z ]/g, '');
+            partyText.value = text;
+
+            // Update the result area letter by letter
+            resultArea.textContent = '';
+
+            for (let i = 0; i < text.length; i++) {
+                setTimeout(() => {
+                    resultArea.textContent += text[i];
+                }, i * 100);
+            }
+        });
+    </script>
+</body>
+</html>

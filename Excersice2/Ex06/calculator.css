@@ -1,0 +1,34 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/**Designing the container**/
+.container{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #bbb;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/**Designing lables**/
+label{
+    display: block;
+    margin-top: 10px;
+}
+/**Designing text fields**/
+input{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+/**Designing Button**/
+button{
+    padding: 10px 20px;
+    background-color: rgb(92, 68, 231);
+    color: aqua;
+    border: none;
+    border-radius: 0px 15px;
+    cursor: pointer;
+}
